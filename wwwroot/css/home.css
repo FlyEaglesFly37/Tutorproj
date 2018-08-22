@@ -1,0 +1,25 @@
+.container{
+    position: relative;
+}
+.logo{
+    display: inline-block;
+}
+.nav{
+    float: right;
+}
+.heading{
+    text-align: center;
+}
+.searchbar{
+    text-align: center;
+}
+.input{
+    height: 50px;
+    width: 600px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.searchbutton{
+    font-size: 20px;
+}

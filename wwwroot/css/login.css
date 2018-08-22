@@ -1,0 +1,9 @@
+.container{
+    position: relative;
+}
+.logo{
+    display: inline-block;
+}
+.nav{
+    float: right;
+}

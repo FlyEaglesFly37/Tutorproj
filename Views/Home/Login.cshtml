@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tutor</title>
+</head>
+<body>
+<div class="login">
+    <h3>Login</h3>
+    <form asp-action="About" asp-controller="Home" method="post">
+        <span>@ViewBag.error</span>
+        <p>Email: <input asp-for="Email"></p>
+        <p>Password: <input asp-for="Password"></p>
+        <button>Login</button>
+    </form>
+</div>
+</body>
+</html>

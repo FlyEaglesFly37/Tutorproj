@@ -8,3 +8,14 @@ C:\Users\austi_000\Documents\CodingDojo\C#\Tutor\obj\Debug\netcoreapp2.0\Tutor.A
 C:\Users\austi_000\Documents\CodingDojo\C#\Tutor\obj\Debug\netcoreapp2.0\Tutor.AssemblyInfo.cs
 C:\Users\austi_000\Documents\CodingDojo\C#\Tutor\obj\Debug\netcoreapp2.0\Tutor.dll
 C:\Users\austi_000\Documents\CodingDojo\C#\Tutor\obj\Debug\netcoreapp2.0\Tutor.pdb
+C:\Users\austi_000\Desktop\Tutorproj-master\bin\Debug\netcoreapp2.0\Tutor.deps.json
+C:\Users\austi_000\Desktop\Tutorproj-master\bin\Debug\netcoreapp2.0\Tutor.runtimeconfig.json
+C:\Users\austi_000\Desktop\Tutorproj-master\bin\Debug\netcoreapp2.0\Tutor.runtimeconfig.dev.json
+C:\Users\austi_000\Desktop\Tutorproj-master\bin\Debug\netcoreapp2.0\Tutor.dll
+C:\Users\austi_000\Desktop\Tutorproj-master\bin\Debug\netcoreapp2.0\Tutor.pdb
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.csprojResolveAssemblyReference.cache
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.csproj.CoreCompileInputs.cache
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.AssemblyInfoInputs.cache
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.AssemblyInfo.cs
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.dll
+C:\Users\austi_000\Desktop\Tutorproj-master\obj\Debug\netcoreapp2.0\Tutor.pdb

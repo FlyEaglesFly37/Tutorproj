@@ -12788,11 +12788,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\austi_000\\Documents\\CodingDojo\\C#\\Tutor\\Tutor.csproj",
+      "projectUniqueName": "C:\\Users\\austi_000\\Desktop\\Tutorproj-master\\Tutor.csproj",
       "projectName": "Tutor",
-      "projectPath": "C:\\Users\\austi_000\\Documents\\CodingDojo\\C#\\Tutor\\Tutor.csproj",
+      "projectPath": "C:\\Users\\austi_000\\Desktop\\Tutorproj-master\\Tutor.csproj",
       "packagesPath": "C:\\Users\\austi_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\austi_000\\Documents\\CodingDojo\\C#\\Tutor\\obj\\",
+      "outputPath": "C:\\Users\\austi_000\\Desktop\\Tutorproj-master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

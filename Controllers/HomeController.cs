@@ -15,11 +15,16 @@ namespace Tutor.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Home");
         }
         private UserContext _context;
         public HomeController(UserContext context){
             _context = context;
+        }
+
+        public IActionResult Home()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -31,15 +36,23 @@ namespace Tutor.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     Email = user.Email,
-                    Password = user.Password
+                    Password = user.Password,
+                    DOB = user.DOB,
+                    Street = user.Street,
+                    City = user.City,
+                    State = user.State,
+                    ZipCode = user.ZipCode,
+                    Tutor = user.Tutor,
+                    Travel = user.Travel,
+                    Wage = user.Wage
                 };
                 _context.Add(thisUser);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId", thisUser.UserId);
-                return RedirectToAction("Success", thisUser.UserId);
+                return RedirectToAction("Home", thisUser.UserId);
             }
             else{
-                return View("Index");
+                return View("Register");
             }
         }
 
@@ -49,11 +62,12 @@ namespace Tutor.Controllers
                 var Hasher = new PasswordHasher<User>();
                 if(0 != Hasher.VerifyHashedPassword(thisUser, thisUser.Password, Password)){
                     HttpContext.Session.SetInt32("UserId", thisUser.UserId);
-                    return RedirectToAction("Success");
+                    ViewBag.loggedIn = true;
+                    return View("Home");
                 }
             }
             ViewBag.error = "Email and Password do not match";
-            return View("Index");
+            return View("Login");
         }
 
         public IActionResult About(){

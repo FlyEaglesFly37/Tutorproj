@@ -1,34 +1,73 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/register.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wedding Planner</title>
+    <title>Registration</title>
 </head>
 <body>
-    <h1>Wedding Planner</h1>
-    <div class="register">
-        <h3>Register</h3>
+    <div class="container">
+        <div class="logo"><p>WebsiteName.com</p></div>
+        <div class="nav">
+            <p>
+                <a href="">Help</a> | <a asp-action="About">Login</a> | <a asp-action="Index">Home</a>
+            </p>
+        </div>
+        <h2>Sign Up!</h2>
         @model ValidateUser
-        <form asp-action="Contact" asp-controller="Home" method="post">
-            <span asp-validation-for="FirstName"></span>
-            <p>First Name: <input asp-for="FirstName"></p>
+        <div class="register">
+            <form action="Register" method="post">
 
-            <span asp-validation-for="LastName"></span>
-            <p>Last Name: <input asp-for="LastName"></p>
+                <span asp-validation-for="FirstName"></span>
+                <p>First Name: <input asp-for="FirstName"></p>
 
-            <span asp-validation-for="Email"></span>
-            <p>Email: <input asp-for="Email"></p>
+                <span asp-validation-for="LastName"></span>
+                <p>Last Name: <input asp-for="LastName"></p>
 
-            <span asp-validation-for="Password"></span> 
-            <p>Password: <input asp-for="Password"></p>
+                <span asp-validation-for="DOB"></span>
+                <p>Date of Birth: <input type="date" asp-for="DOB"></p>
 
-            <span asp-validation-for="ConfirmPw"></span>
-            <p>Confirm Password: <input asp-for="ConfirmPw"></p>
-            <button>Submit</button>
-        </form>
+                <span asp-validation-for="Email"></span>
+                <p>Email: <input asp-for="Email"></p>
+              
+                <span asp-validation-for="Street"></span>
+                <p>Street: <input asp-for="Street"></p>
+                
+                <span asp-validation-for="City"></span>
+                <p>City: <input asp-for="City"></p>
+                
+                <span asp-validation-for="State"></span>
+                <p>State: <input asp-for="State"></p>
+                
+                <span asp-validation-for="ZipCode"></span>
+                <p>Zip: <input asp-for="ZipCode"></p>
+                
+                <p>Are you signing up as a tutor?</p>
+                <select name="Tutor">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+
+                <p>Are you willing to travel?</p>
+                <select name="Travel">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+
+                <span asp-validation-for="Wage"></span>
+                <p>Set your fee: <input asp-for="Wage" value="0"></p>
+
+                <span asp-validation-for="Password"></span>
+                <p>Password: <input asp-for="Password"></p>
+
+                <span asp-validation-for="ConfirmPw"></span>
+                <p>Confirm Password: <input asp-for="ConfirmPw"></p>
+
+                <button class="registerButton">Register!</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

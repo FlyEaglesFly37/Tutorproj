@@ -11,10 +11,11 @@
     <div id="container">
         <div class="logo"><p>WebsiteName.com</p></div>
         <div class="nav">
+            @model User
             @{
-                if(@ViewBag.loggedIn == true){
+                if(@ViewBag.SessionId != null){
                     <p>
-                        <a href="">Help</a> | <a asp-action="Logout">Logout</a> | <a href="">Profile</a>
+                        <a href="">Help</a> | <a asp-action="Logout">Logout</a> | <a href="">@Model.FirstName's Profile</a>
                     </p>
                 }
                 else{

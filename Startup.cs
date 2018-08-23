@@ -33,7 +33,6 @@ namespace Tutor
         {
             if (env.IsDevelopment())
             {
-                app.UseSession();
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -42,7 +41,7 @@ namespace Tutor
             }
 
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

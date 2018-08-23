@@ -24,7 +24,9 @@ namespace Tutor.Controllers
 
         public IActionResult Home()
         {
-            return View();
+            var thisUser = _context.Users.Where(p => p.UserId == HttpContext.Session.GetInt32("UserId")).FirstOrDefault();
+            ViewBag.SessionId = HttpContext.Session.GetInt32("UserId");
+            return View(thisUser);
         }
 
         [HttpPost]
@@ -62,8 +64,9 @@ namespace Tutor.Controllers
                 var Hasher = new PasswordHasher<User>();
                 if(0 != Hasher.VerifyHashedPassword(thisUser, thisUser.Password, Password)){
                     HttpContext.Session.SetInt32("UserId", thisUser.UserId);
-                    ViewBag.loggedIn = true;
-                    return View("Home");
+                    ViewBag.SessionId = HttpContext.Session.GetInt32("UserId");
+                    ViewBag.Name = thisUser.FirstName;
+                    return RedirectToAction("Home");
                 }
             }
             ViewBag.error = "Email and Password do not match";
@@ -76,6 +79,11 @@ namespace Tutor.Controllers
 
         public IActionResult Contact(){
             return View("Register");
+        }
+
+        public IActionResult Logout(){
+            HttpContext.Session.Clear();
+            return View("Home");
         }
 
         public IActionResult Error()

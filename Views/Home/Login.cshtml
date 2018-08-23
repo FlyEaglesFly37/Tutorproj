@@ -12,18 +12,19 @@
         <div class="logo"><p>WebsiteName.com</p></div>
         <div class="nav">
             <p>
-                <a href="">Help</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/home.html">Home</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/register.html">Register</a>
+                <a href="">Help</a> | <a asp-action="Index">Home</a> | <a asp-action="Contact">Register</a>
             </p>
         </div>
         <h2>Login!</h2>
         <div class="login">
-            <form action="">
+            @model ValidateUser
+            <form action="Login">
+                <span>@ViewBag.error</span>
                 <p>Email: <input asp-for="Email"></p>
                 <p>Password: <input asp-for="Password"></p>
                 <button>Log In!</button>
             </form>
         </div>
     </div>
-    
 </body>
 </html>

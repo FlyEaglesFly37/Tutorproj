@@ -6,6 +6,7 @@ namespace Tutor.Models
 {
     public class User
     {
+        [Key]
         public int UserId {get; set;}
         public string FirstName {get; set;}
         public string LastName {get; set;}
@@ -20,9 +21,9 @@ namespace Tutor.Models
         [MinLength(5)]
         [MaxLength(5)]
         public int ZipCode {get; set;}
-        public bool Tutor {get; set;} = false;
+        public string Tutor {get; set;}
         public List<Language> Languages {get; set;}
-        public bool Travel {get; set;} = false;
+        public string Travel {get; set;}
         public int Wage {get; set;} = 0;
         public int Rating {get; set;} = 0;
         public User(){

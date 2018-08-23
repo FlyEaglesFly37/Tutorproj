@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="~/register.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,12 +12,13 @@
         <div class="logo"><p>WebsiteName.com</p></div>
         <div class="nav">
             <p>
-                <a href="">Help</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/login.html">Login</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/home.html">Home</a>
+                <a href="">Help</a> | <a asp-action="About">Login</a> | <a asp-action="Index">Home</a>
             </p>
         </div>
         <h2>Sign Up!</h2>
+        @model ValidateUser
         <div class="register">
-            <form action="" method="post">
+            <form action="Register" method="post">
 
                 <span asp-validation-for="FirstName"></span>
                 <p>First Name: <input asp-for="FirstName"></p>
@@ -40,21 +41,29 @@
                 <span asp-validation-for="State"></span>
                 <p>State: <input asp-for="State"></p>
                 
-                <span asp-validation-for="Zip"></span>
-                <p>Zip: <input asp-for="Zip"></p>
+                <span asp-validation-for="ZipCode"></span>
+                <p>Zip: <input asp-for="ZipCode"></p>
                 
-                <p>Are you signing up as a tutor?<input type="checkbox" asp-for="Tutor"></p>
+                <p>Are you signing up as a tutor?</p>
+                <select name="Tutor">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
 
-                <p>Choose the language(s) you would like to tutor in:</p>
-                <p>Whatever Language <input type="checkbox"></p>
+                <p>Are you willing to travel?</p>
+                <select name="Travel">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
 
-                <p>Are you willing to travel? <input type="checkbox" asp-for="Travel"></p>
+                <span asp-validation-for="Wage"></span>
+                <p>Set your fee: <input asp-for="Wage" value="0"></p>
 
                 <span asp-validation-for="Password"></span>
                 <p>Password: <input asp-for="Password"></p>
-
-                <span asp-validation-for="ConfirmPass"></span>
-                <p>Confirm Password: <input asp-for="ConfirmPass"></p>
+                
+                <span asp-validation-for="ConfirmPw"></span>
+                <p>Confirm Password: <input asp-for="ConfirmPw"></p>
 
                 <button class="registerButton">Register!</button>
             </form>

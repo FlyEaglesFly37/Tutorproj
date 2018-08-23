@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="~./home.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,9 +11,19 @@
     <div id="container">
         <div class="logo"><p>WebsiteName.com</p></div>
         <div class="nav">
-            <p>
-                <a href="">Help</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/login.html">Login</a> | <a href="file:///Users/jharmoush/CodingDojo/c%23/Projects/html/register.html">Register</a>
-            </p>
+
+            @{
+                if(@ViewBag.loggedIn == true){
+                    <p>
+                        <a href="">Help</a> | <a asp-action="Logout">Logout</a> | <a href="">Profile</a>
+                    </p>
+                }
+                else{
+                    <p>
+                        <a href="">Help</a> | <a asp-action="About">Login</a> | <a asp-action="Contact">Register</a>
+                    </p>
+                }
+            }
         </div>
         <h1 class="heading">Find Your Tutor!</h1>
         <div class="searchbar">
